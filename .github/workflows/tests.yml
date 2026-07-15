@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     # Official Playwright image — browsers + system deps preinstalled, consistent rendering.
     container:
-      image: mcr.microsoft.com/playwright:v1.48.2-jammy
+      image: mcr.microsoft.com/playwright:v1.61.1-jammy
 
     steps:
       - name: Checkout
