@@ -1,0 +1,656 @@
+{
+  "workers-1": {
+    "workers": 1,
+    "totalDuration": 14,
+    "durationLabel": "14s",
+    "totalTests": 32,
+    "passed": 32,
+    "failed": 0,
+    "tests": [
+      {
+        "name": "auth.api.spec.ts › API · authentication › POST /api/login with valid credentials returns 200 and a token",
+        "project": "api",
+        "status": "passed",
+        "duration": 0.01
+      },
+      {
+        "name": "auth.api.spec.ts › API · authentication › POST /api/login with a wrong password returns 401",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "auth.api.spec.ts › API · authentication › POST /api/login with empty fields returns 400",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "auth.api.spec.ts › API · authentication › [TC-API-002] GET /api/tasks without a token returns 401",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › GET /api/tasks returns 200 with the standard envelope",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › GET /api/tasks/:id returns a single task",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › [TC-API-003] GET /api/tasks/9999 returns 404",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › [TC-API-001] POST /api/tasks creates a task (201)",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › POST /api/tasks without a title returns 400",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › PUT /api/tasks/:id updates a task (200)",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › PATCH /api/tasks/:id/status updates the status (200)",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › PATCH /api/tasks/:id/status with an invalid status returns 400",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › DELETE /api/tasks/:id removes a task (200)",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › DELETE /api/tasks/:id returns 404 for a missing task",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › [TC-API-004] GET /api/tasks?status=DONE (uppercase) should be case-insensitive [BUG-108]",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › the status filter is case-sensitive today — characterizes BUG-108",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "auth.spec.ts › Authentication › [TC-001] logs in with valid credentials and redirects to /tasks",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.83,
+        "video": "videos/workers-1/auth-spec-ts-authentication-tc-001-logs-in-with-valid-credentials-and-redirects-.webm"
+      },
+      {
+        "name": "auth.spec.ts › Authentication › [TC-002] rejects a wrong password with a 401 and stays on the login page",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.85,
+        "video": "videos/workers-1/auth-spec-ts-authentication-tc-002-rejects-a-wrong-password-with-a-401-and-stays.webm"
+      },
+      {
+        "name": "auth.spec.ts › Authentication › [TC-003] validates empty fields on the client without calling the API",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.34,
+        "video": "videos/workers-1/auth-spec-ts-authentication-tc-003-validates-empty-fields-on-the-client-without-.webm"
+      },
+      {
+        "name": "auth.spec.ts › Authentication › [TC-004] validates an invalid email format",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.76,
+        "video": "videos/workers-1/auth-spec-ts-authentication-tc-004-validates-an-invalid-email-format.webm"
+      },
+      {
+        "name": "auth.spec.ts › Authentication › logs out and returns to the login page",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.62,
+        "video": "videos/workers-1/auth-spec-ts-authentication-logs-out-and-returns-to-the-login-page.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › [TC-009] the \"All\" filter shows every seeded task",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.3,
+        "video": "videos/workers-1/filters-spec-ts-status-filters-tc-009-the-all-filter-shows-every-seeded-task.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › the counter matches the number of visible rows",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.31,
+        "video": "videos/workers-1/filters-spec-ts-status-filters-the-counter-matches-the-number-of-visible-rows.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › [TC-009] the \"To Do\" filter shows only To Do tasks",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.49,
+        "video": "videos/workers-1/filters-spec-ts-status-filters-tc-009-the-to-do-filter-shows-only-to-do-tasks.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › [TC-009] the \"In Progress\" filter shows only In Progress tasks",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.49,
+        "video": "videos/workers-1/filters-spec-ts-status-filters-tc-009-the-in-progress-filter-shows-only-in-progr.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › [TC-009] the \"Done\" filter shows only Done tasks",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.48,
+        "video": "videos/workers-1/filters-spec-ts-status-filters-tc-009-the-done-filter-shows-only-done-tasks.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-005] creates a task and shows it in the list",
+        "project": "ui",
+        "status": "passed",
+        "duration": 1.59,
+        "video": "videos/workers-1/tasks-spec-ts-task-management-tc-005-creates-a-task-and-shows-it-in-the-list.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-006] edits an existing task and persists the changes",
+        "project": "ui",
+        "status": "passed",
+        "duration": 2.09,
+        "video": "videos/workers-1/tasks-spec-ts-task-management-tc-006-edits-an-existing-task-and-persists-the-cha.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-007] deletes a task after confirmation",
+        "project": "ui",
+        "status": "passed",
+        "duration": 1.11,
+        "video": "videos/workers-1/tasks-spec-ts-task-management-tc-007-deletes-a-task-after-confirmation.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-008] changes a task status",
+        "project": "ui",
+        "status": "passed",
+        "duration": 1.42,
+        "video": "videos/workers-1/tasks-spec-ts-task-management-tc-008-changes-a-task-status.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-010] lists tasks sorted by id ascending",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.16,
+        "video": "videos/workers-1/tasks-spec-ts-task-management-tc-010-lists-tasks-sorted-by-id-ascending.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-011] create task submits once on double-click [BUG-107]",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.72,
+        "video": "videos/workers-1/tasks-spec-ts-task-management-tc-011-create-task-submits-once-on-double-click-bu.webm"
+      }
+    ]
+  },
+  "workers-2": {
+    "workers": 2,
+    "totalDuration": 7.7,
+    "durationLabel": "8s",
+    "totalTests": 32,
+    "passed": 32,
+    "failed": 0,
+    "tests": [
+      {
+        "name": "auth.api.spec.ts › API · authentication › POST /api/login with valid credentials returns 200 and a token",
+        "project": "api",
+        "status": "passed",
+        "duration": 0.01
+      },
+      {
+        "name": "auth.api.spec.ts › API · authentication › POST /api/login with a wrong password returns 401",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "auth.api.spec.ts › API · authentication › POST /api/login with empty fields returns 400",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "auth.api.spec.ts › API · authentication › [TC-API-002] GET /api/tasks without a token returns 401",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › GET /api/tasks returns 200 with the standard envelope",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › GET /api/tasks/:id returns a single task",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › [TC-API-003] GET /api/tasks/9999 returns 404",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › [TC-API-001] POST /api/tasks creates a task (201)",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › POST /api/tasks without a title returns 400",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › PUT /api/tasks/:id updates a task (200)",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › PATCH /api/tasks/:id/status updates the status (200)",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › PATCH /api/tasks/:id/status with an invalid status returns 400",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › DELETE /api/tasks/:id removes a task (200)",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › DELETE /api/tasks/:id returns 404 for a missing task",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › [TC-API-004] GET /api/tasks?status=DONE (uppercase) should be case-insensitive [BUG-108]",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › the status filter is case-sensitive today — characterizes BUG-108",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "auth.spec.ts › Authentication › [TC-001] logs in with valid credentials and redirects to /tasks",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.82,
+        "video": "videos/workers-2/auth-spec-ts-authentication-tc-001-logs-in-with-valid-credentials-and-redirects-.webm"
+      },
+      {
+        "name": "auth.spec.ts › Authentication › [TC-002] rejects a wrong password with a 401 and stays on the login page",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.88,
+        "video": "videos/workers-2/auth-spec-ts-authentication-tc-002-rejects-a-wrong-password-with-a-401-and-stays.webm"
+      },
+      {
+        "name": "auth.spec.ts › Authentication › [TC-003] validates empty fields on the client without calling the API",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.34,
+        "video": "videos/workers-2/auth-spec-ts-authentication-tc-003-validates-empty-fields-on-the-client-without-.webm"
+      },
+      {
+        "name": "auth.spec.ts › Authentication › [TC-004] validates an invalid email format",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.75,
+        "video": "videos/workers-2/auth-spec-ts-authentication-tc-004-validates-an-invalid-email-format.webm"
+      },
+      {
+        "name": "auth.spec.ts › Authentication › logs out and returns to the login page",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.62,
+        "video": "videos/workers-2/auth-spec-ts-authentication-logs-out-and-returns-to-the-login-page.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › [TC-009] the \"All\" filter shows every seeded task",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.31,
+        "video": "videos/workers-2/filters-spec-ts-status-filters-tc-009-the-all-filter-shows-every-seeded-task.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › the counter matches the number of visible rows",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.31,
+        "video": "videos/workers-2/filters-spec-ts-status-filters-the-counter-matches-the-number-of-visible-rows.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › [TC-009] the \"To Do\" filter shows only To Do tasks",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.47,
+        "video": "videos/workers-2/filters-spec-ts-status-filters-tc-009-the-to-do-filter-shows-only-to-do-tasks.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › [TC-009] the \"In Progress\" filter shows only In Progress tasks",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.49,
+        "video": "videos/workers-2/filters-spec-ts-status-filters-tc-009-the-in-progress-filter-shows-only-in-progr.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › [TC-009] the \"Done\" filter shows only Done tasks",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.48,
+        "video": "videos/workers-2/filters-spec-ts-status-filters-tc-009-the-done-filter-shows-only-done-tasks.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-005] creates a task and shows it in the list",
+        "project": "ui",
+        "status": "passed",
+        "duration": 1.55,
+        "video": "videos/workers-2/tasks-spec-ts-task-management-tc-005-creates-a-task-and-shows-it-in-the-list.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-006] edits an existing task and persists the changes",
+        "project": "ui",
+        "status": "passed",
+        "duration": 2.11,
+        "video": "videos/workers-2/tasks-spec-ts-task-management-tc-006-edits-an-existing-task-and-persists-the-cha.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-007] deletes a task after confirmation",
+        "project": "ui",
+        "status": "passed",
+        "duration": 1.12,
+        "video": "videos/workers-2/tasks-spec-ts-task-management-tc-007-deletes-a-task-after-confirmation.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-010] lists tasks sorted by id ascending",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.16,
+        "video": "videos/workers-2/tasks-spec-ts-task-management-tc-010-lists-tasks-sorted-by-id-ascending.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-011] create task submits once on double-click [BUG-107]",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.7,
+        "video": "videos/workers-2/tasks-spec-ts-task-management-tc-011-create-task-submits-once-on-double-click-bu.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-008] changes a task status",
+        "project": "ui",
+        "status": "passed",
+        "duration": 1.47,
+        "video": "videos/workers-2/tasks-spec-ts-task-management-tc-008-changes-a-task-status.webm"
+      }
+    ]
+  },
+  "workers-4": {
+    "workers": 4,
+    "totalDuration": 5.1,
+    "durationLabel": "5s",
+    "totalTests": 32,
+    "passed": 32,
+    "failed": 0,
+    "tests": [
+      {
+        "name": "auth.api.spec.ts › API · authentication › POST /api/login with a wrong password returns 401",
+        "project": "api",
+        "status": "passed",
+        "duration": 0.02
+      },
+      {
+        "name": "auth.api.spec.ts › API · authentication › POST /api/login with empty fields returns 400",
+        "project": "api",
+        "status": "passed",
+        "duration": 0.01
+      },
+      {
+        "name": "auth.api.spec.ts › API · authentication › POST /api/login with valid credentials returns 200 and a token",
+        "project": "api",
+        "status": "passed",
+        "duration": 0.01
+      },
+      {
+        "name": "auth.api.spec.ts › API · authentication › [TC-API-002] GET /api/tasks without a token returns 401",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › GET /api/tasks returns 200 with the standard envelope",
+        "project": "api",
+        "status": "passed",
+        "duration": 0.01
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › [TC-API-001] POST /api/tasks creates a task (201)",
+        "project": "api",
+        "status": "passed",
+        "duration": 0.01
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › GET /api/tasks/:id returns a single task",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › POST /api/tasks without a title returns 400",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › PATCH /api/tasks/:id/status updates the status (200)",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › [TC-API-003] GET /api/tasks/9999 returns 404",
+        "project": "api",
+        "status": "passed",
+        "duration": 0.01
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › PATCH /api/tasks/:id/status with an invalid status returns 400",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › PUT /api/tasks/:id updates a task (200)",
+        "project": "api",
+        "status": "passed",
+        "duration": 0.01
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › DELETE /api/tasks/:id removes a task (200)",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › DELETE /api/tasks/:id returns 404 for a missing task",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › [TC-API-004] GET /api/tasks?status=DONE (uppercase) should be case-insensitive [BUG-108]",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "tasks.api.spec.ts › API · tasks › the status filter is case-sensitive today — characterizes BUG-108",
+        "project": "api",
+        "status": "passed",
+        "duration": 0
+      },
+      {
+        "name": "auth.spec.ts › Authentication › [TC-003] validates empty fields on the client without calling the API",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.47,
+        "video": "videos/workers-4/auth-spec-ts-authentication-tc-003-validates-empty-fields-on-the-client-without-.webm"
+      },
+      {
+        "name": "auth.spec.ts › Authentication › [TC-004] validates an invalid email format",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.9,
+        "video": "videos/workers-4/auth-spec-ts-authentication-tc-004-validates-an-invalid-email-format.webm"
+      },
+      {
+        "name": "auth.spec.ts › Authentication › [TC-001] logs in with valid credentials and redirects to /tasks",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.97,
+        "video": "videos/workers-4/auth-spec-ts-authentication-tc-001-logs-in-with-valid-credentials-and-redirects-.webm"
+      },
+      {
+        "name": "auth.spec.ts › Authentication › [TC-002] rejects a wrong password with a 401 and stays on the login page",
+        "project": "ui",
+        "status": "passed",
+        "duration": 1,
+        "video": "videos/workers-4/auth-spec-ts-authentication-tc-002-rejects-a-wrong-password-with-a-401-and-stays.webm"
+      },
+      {
+        "name": "auth.spec.ts › Authentication › logs out and returns to the login page",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.71,
+        "video": "videos/workers-4/auth-spec-ts-authentication-logs-out-and-returns-to-the-login-page.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › [TC-009] the \"All\" filter shows every seeded task",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.37,
+        "video": "videos/workers-4/filters-spec-ts-status-filters-tc-009-the-all-filter-shows-every-seeded-task.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › the counter matches the number of visible rows",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.35,
+        "video": "videos/workers-4/filters-spec-ts-status-filters-the-counter-matches-the-number-of-visible-rows.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › [TC-009] the \"To Do\" filter shows only To Do tasks",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.56,
+        "video": "videos/workers-4/filters-spec-ts-status-filters-tc-009-the-to-do-filter-shows-only-to-do-tasks.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › [TC-009] the \"In Progress\" filter shows only In Progress tasks",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.52,
+        "video": "videos/workers-4/filters-spec-ts-status-filters-tc-009-the-in-progress-filter-shows-only-in-progr.webm"
+      },
+      {
+        "name": "filters.spec.ts › Status filters › [TC-009] the \"Done\" filter shows only Done tasks",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.54,
+        "video": "videos/workers-4/filters-spec-ts-status-filters-tc-009-the-done-filter-shows-only-done-tasks.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-007] deletes a task after confirmation",
+        "project": "ui",
+        "status": "passed",
+        "duration": 1.19,
+        "video": "videos/workers-4/tasks-spec-ts-task-management-tc-007-deletes-a-task-after-confirmation.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-005] creates a task and shows it in the list",
+        "project": "ui",
+        "status": "passed",
+        "duration": 1.62,
+        "video": "videos/workers-4/tasks-spec-ts-task-management-tc-005-creates-a-task-and-shows-it-in-the-list.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-010] lists tasks sorted by id ascending",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.18,
+        "video": "videos/workers-4/tasks-spec-ts-task-management-tc-010-lists-tasks-sorted-by-id-ascending.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-008] changes a task status",
+        "project": "ui",
+        "status": "passed",
+        "duration": 1.51,
+        "video": "videos/workers-4/tasks-spec-ts-task-management-tc-008-changes-a-task-status.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-011] create task submits once on double-click [BUG-107]",
+        "project": "ui",
+        "status": "passed",
+        "duration": 0.74,
+        "video": "videos/workers-4/tasks-spec-ts-task-management-tc-011-create-task-submits-once-on-double-click-bu.webm"
+      },
+      {
+        "name": "tasks.spec.ts › Task management › [TC-006] edits an existing task and persists the changes",
+        "project": "ui",
+        "status": "passed",
+        "duration": 2.17,
+        "video": "videos/workers-4/tasks-spec-ts-task-management-tc-006-edits-an-existing-task-and-persists-the-cha.webm"
+      }
+    ]
+  }
+}

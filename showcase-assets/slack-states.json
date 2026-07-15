@@ -1,0 +1,72 @@
+{
+  "_comment": "Data for the four Slack-notification states shown on the showcase. It follows the end-to-end BUG-107 (double-submission) story: knownBug -> fixed. Counts use the full suite size (35 tests: 16 UI + 16 API + 3 visual; the setup fixture is not counted) and the real 4-worker duration.",
+  "green": {
+    "type": "success",
+    "title": "All tests passed",
+    "passed": 35,
+    "failed": 0,
+    "knownIssues": 0,
+    "workers": 4,
+    "duration": "9s",
+    "branch": "main",
+    "commit": "a3f9c21",
+    "reportUrl": "showcase-assets/allure-report/index.html"
+  },
+  "red": {
+    "type": "failure",
+    "title": "Tests failed",
+    "passed": 32,
+    "failed": 3,
+    "knownIssues": 0,
+    "workers": 4,
+    "duration": "10s",
+    "branch": "feature/checkout",
+    "commit": "b7e2d10",
+    "reportUrl": "showcase-assets/allure-report/index.html",
+    "failedTests": [
+      "ui/tasks.spec.ts › [TC-007] deletes a task after confirmation",
+      "ui/tasks.spec.ts › [TC-008] changes a task status",
+      "api/tasks.api.spec.ts › [TC-API-001] POST /api/tasks creates a task (201)"
+    ]
+  },
+  "knownBug": {
+    "type": "warning",
+    "title": "Passed with known issues",
+    "passed": 34,
+    "failed": 0,
+    "knownIssues": 1,
+    "workers": 4,
+    "duration": "9s",
+    "branch": "main",
+    "commit": "c1a8f42",
+    "reportUrl": "showcase-assets/allure-report/index.html",
+    "knownIssues_detail": [
+      {
+        "test": "ui/tasks.spec.ts › [TC-011] create task submits once on double-click [BUG-107]",
+        "bug": "BUG-107",
+        "severity": "high",
+        "status": "reported, awaiting fix",
+        "report": "showcase-assets/artifacts/bug-report-107.md"
+      }
+    ]
+  },
+  "fixed": {
+    "type": "resolved",
+    "title": "Fixed & verified",
+    "passed": 35,
+    "failed": 0,
+    "knownIssues": 0,
+    "workers": 4,
+    "duration": "9s",
+    "branch": "main",
+    "commit": "d4b9e88",
+    "reportUrl": "showcase-assets/allure-report/index.html",
+    "resolved": [
+      {
+        "test": "ui/tasks.spec.ts › [TC-011] create task submits once on double-click [BUG-107]",
+        "bug": "BUG-107",
+        "status": "fixed & re-enabled"
+      }
+    ]
+  }
+}

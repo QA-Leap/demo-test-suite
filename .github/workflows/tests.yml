@@ -1,0 +1,86 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Cancel superseded runs on the same ref.
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  e2e:
+    name: Playwright (UI · API · Visual)
+    runs-on: ubuntu-latest
+    # Official Playwright image — browsers + system deps preinstalled, consistent rendering.
+    container:
+      image: mcr.microsoft.com/playwright:v1.48.2-jammy
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # The system under test (Task Manager demo) is bundled in this repo under `qaleap-demo/`,
+      # so there's no separate checkout — just install its deps and Playwright auto-starts it.
+      - name: Install demo app dependencies
+        run: npm --prefix qaleap-demo install
+
+      - name: Install test dependencies
+        run: npm ci
+
+      # Functional lane: UI + API. Runs on its own so a visual diff can never block it.
+      - name: Run functional suite (UI + API)
+        env:
+          DEMO_DIR: ./qaleap-demo
+          # Credentials are injected from CI secrets — never committed. The code falls
+          # back to the demo's public sandbox login if these secrets are unset.
+          DEMO_EMAIL: ${{ secrets.DEMO_EMAIL }}
+          DEMO_PASSWORD: ${{ secrets.DEMO_PASSWORD }}
+        run: npx playwright test
+
+      # Visual lane: isolated, headless, against a fresh demo (deterministic screenshots).
+      # `--update-snapshots` bootstraps this run's Linux baselines (uploaded as an artifact
+      # so they can be committed to enable strict visual diffing — see tests/visual/README.md).
+      - name: Run visual regression (isolated)
+        env:
+          VISUAL: '1'
+          DEMO_DIR: ./qaleap-demo
+          DEMO_EMAIL: ${{ secrets.DEMO_EMAIL }}
+          DEMO_PASSWORD: ${{ secrets.DEMO_PASSWORD }}
+        run: npx playwright test --project=visual --update-snapshots
+
+      # Allure's report generator is a Java tool; the Playwright image has no JRE.
+      - name: Install Java (for the Allure report)
+        if: always()
+        run: apt-get update && apt-get install -y --no-install-recommends default-jre-headless
+
+      - name: Generate Allure report
+        if: always()
+        run: npx allure generate allure-results --clean -o allure-report
+
+      - name: Upload Allure report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report
+          retention-days: 14
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
+          retention-days: 14
+
+      - name: Upload Linux visual baselines
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-baselines-linux
+          path: tests/visual/**/*-linux.png
+          retention-days: 14
+          if-no-files-found: ignore

@@ -1,0 +1,28 @@
+node_modules/
+
+# Local environment / secrets — never commit (.env.example is the tracked template)
+.env
+.env.*
+!.env.example
+
+# Playwright / test outputs
+/test-results/
+/playwright-report/
+/playwright/.auth/
+/blob-report/
+
+# Allure
+/allure-results/
+/allure-report/
+.allure/
+
+# Showcase — heavy generated assets (regenerate with `npm run record` / `npm run allure:generate`).
+# The small source files (run-data.json, slack-states.json, artifacts/) stay tracked.
+/showcase-assets/videos/
+/showcase-assets/allure-report/
+/.tape-*.json
+
+*.log
+.DS_Store
+
+# NOTE: visual baselines (tests/visual/**/*-snapshots/) are intentionally committed.

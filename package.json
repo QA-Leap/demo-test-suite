@@ -1,0 +1,34 @@
+{
+  "name": "qaleap-demo-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A public example of QA Leap's automated testing approach — Playwright UI, API & visual tests for the Task Manager demo.",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --project=ui",
+    "test:api": "playwright test --project=api",
+    "test:visual": "VISUAL=1 playwright test --project=visual",
+    "test:headed": "playwright test --project=ui --headed",
+    "test:1": "playwright test --workers=1",
+    "test:2": "playwright test --workers=2",
+    "test:4": "playwright test --workers=4",
+    "update:snapshots": "VISUAL=1 playwright test --project=visual --update-snapshots",
+    "report": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "report:generate": "allure generate allure-results --clean -o allure-report",
+    "report:serve": "allure serve allure-results",
+    "record": "node scripts/record.mjs",
+    "allure:generate": "node scripts/build-allure.mjs",
+    "allure:seed": "node scripts/seed-allure-history.mjs",
+    "allure:open": "allure open showcase-assets/allure-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@types/node": "^20.16.11",
+    "allure-commandline": "^2.30.0",
+    "allure-js-commons": "^2.15.1",
+    "allure-playwright": "^2.15.1",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.6.3"
+  }
+}
