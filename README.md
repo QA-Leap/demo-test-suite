@@ -194,7 +194,7 @@ Hosting is intentionally not wired up yet — everything runs and opens locally.
 ## Links
 
 - 🔗 **App under test:** the [Task Manager demo](qaleap-demo) — bundled in this repo, runs locally (not a hosted site).
-- 🔗 **QA process showcase:** _coming soon_ — the full walkthrough (bug reports, dashboards, CI).
+- 🔗 **QA process showcase:** **[qaleap.com/showcase](https://qaleap.com/showcase/)** — the full, interactive end-to-end walkthrough of our process: test plan, tests running live in the browser, actionable bug reports, Slack alerts and the complete Allure report.
 - 🌐 **QA Leap:** [qaleap.com](https://qaleap.com)
 
 ---

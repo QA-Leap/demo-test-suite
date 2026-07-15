@@ -139,8 +139,8 @@ test.describe('API · tasks', () => {
    * done tasks, but the server does a case-sensitive exact match and returns [].
    * See ../../qaleap-demo/KNOWN_BUGS.md → BUG-108.
    *
-   * We keep this as `test.fixme` so it stays visible in reports as a *known / expected*
-   * issue instead of being silently deleted. When BUG-108 is fixed, drop `.fixme` and
+   * We keep this as `test.fail()` so it stays visible in reports as a *known / expected*
+   * failure instead of being silently deleted. When BUG-108 is fixed, drop `test.fail()` and
    * it immediately becomes an active regression guard.
    */
   test('[TC-API-004] GET /api/tasks?status=DONE (uppercase) should be case-insensitive [BUG-108]', async ({
